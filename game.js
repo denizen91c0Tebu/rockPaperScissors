@@ -55,3 +55,20 @@ function playRound(playerSelection, computerSelection) {
         return "You Lose! Rock beats scissors"
     }
 }
+
+function playGame() {
+    for(i = 0; i <= 4; i++) {
+        playRound();
+    }
+    if (playerScore > computerScore){
+        return "You have won the tournament!"
+    }
+    else if (computerScore > playerScore){
+        return "You have lost the tournament!"
+    }
+    else if (computerScore == playerScore) {
+        return "It's a tie!"
+    }
+}
+
+console.log(playGame())
